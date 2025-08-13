@@ -1,22 +1,63 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Logo Voting</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Logo Upvote Grid</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+    }
+    .logo-card {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: center;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+    }
+    .logo-card img {
+      max-width: 100px;
+      height: auto;
+    }
+    .upvote-btn {
+      margin-top: 0.5rem;
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      border: none;
+      background-color: #0070f3;
+      color: white;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+  </style>
 </head>
 <body>
-  <div class="logo-grid">
+
+  <h1>Logo Upvote Grid</h1>
+
+  <div class="grid">
     <div class="logo-card" data-id="logo1">
-      <img src="https://via.placeholder.com/100" alt="Logo 1">
+      <img src="https://via.placeholder.com/100?text=Logo+1" alt="Logo 1" />
       <button class="upvote-btn">👍 <span class="votes">0</span></button>
     </div>
     <div class="logo-card" data-id="logo2">
-      <img src="https://via.placeholder.com/100" alt="Logo 2">
+      <img src="https://via.placeholder.com/100?text=Logo+2" alt="Logo 2" />
+      <button class="upvote-btn">👍 <span class="votes">0</span></button>
+    </div>
+    <div class="logo-card" data-id="logo3">
+      <img src="https://via.placeholder.com/100?text=Logo+3" alt="Logo 3" />
       <button class="upvote-btn">👍 <span class="votes">0</span></button>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
